@@ -1,8 +1,4 @@
-require
-  urlArgs: "b=#{(new Date()).getTime()}"
-  paths:
-    jquery: 'vendor/jquery/jquery'
-  , ['app/example-view']
-  , (ExampleView) ->
-    view = new ExampleView()
-    view.render('body')
+require ['common'], ->
+  require ['app/main', 'ember'], (App, Ember) ->
+    window.App = Ember.Application.create(App)
+    

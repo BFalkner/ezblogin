@@ -118,7 +118,7 @@ exports.config = {
     # define: {}                # An object containing stylus variable defines
     # includes: []              # Files to include for compilation
 
-  # template:                         # overall template object can be set to null if no
+  template:                         # overall template object can be set to null if no
                                       # templates being used
     # nameTransform: "fileName"       # means by which Mimosa creates the name for each
                                       # template, options: default "fileName" is name of file,
@@ -158,15 +158,15 @@ exports.config = {
                                       # provided for each output entry, and the names
                                       # must be unique.
 
-    # handlebars:                     # handlebars specific configuration
-      # helpers:["app/template/handlebars-helpers"]  # the paths from watch.javascriptDir to
+    handlebars:                     # handlebars specific configuration
+      helpers:["app/template/handlebars-helpers"]  # the paths from watch.javascriptDir to
                                       # the files containing handlebars helper/partial
                                       # registrations
-      # ember:                        # Ember.js has its own Handlebars compilation needs,
+      ember:                        # Ember.js has its own Handlebars compilation needs,
                                       # use this config block to provide Ember specific
                                       # Handlebars configuration.
-        # enabled: false              # Whether or not to use the Ember Handlebars compiler
-        # path: "vendor/ember"        # location of the Ember library, this is used as
+        enabled: true              # Whether or not to use the Ember Handlebars compiler
+        path: "ember"        # location of the Ember library, this is used as
                                       # as a dependency in the compiled templates.
 
   ###
