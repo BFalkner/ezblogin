@@ -1,4 +1,3 @@
 require ['common'], ->
-  require ['app/main', 'ember'], (App, Ember) ->
+  require ['App', 'ember'], (App, Ember) ->
     window.App = Ember.Application.create(App)
-    
