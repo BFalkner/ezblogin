@@ -14,4 +14,14 @@ index = (config) ->
 
   (req, res) -> res.render name, options
 
-exports.index = index
+module.exports = (app, config) ->
+  products = require './controllers/products'
+  
+  app.get '/products', products.index
+  app.post '/products', products.create
+  app.all '/product/:id/:op?', products.load
+  app.get '/product/:id', products.show
+  app.put '/product/:id', products.update
+  app.delete '/product/:id', products.destroy
+  
+  app.get '/', index(config)

@@ -1,9 +1,16 @@
-express =        require 'express'
-engines =        require 'consolidate'
-
-routes  =        require './routes'
+express   = require 'express'
+engines   = require 'consolidate'
+mongoose  = require 'mongoose'
+fs        = require 'fs'
 
 exports.startServer = (config, callback) ->
+  
+  mongoose.connect "mongodb://localhost:27017/ezblogin-dev"
+  
+  models_path = __dirname + '/models'
+  fs.readdirSync(models_path).forEach (file) ->
+    require(models_path + '/' + file) if (~file.indexOf('.coffee'))
+
 
   port = process.env.PORT or config.server.port
 
@@ -26,7 +33,6 @@ exports.startServer = (config, callback) ->
   app.configure 'development', ->
     app.use express.errorHandler()
 
-  app.get '/', routes.index(config)
+  require('./routes') app, config
 
   callback(server)
-
