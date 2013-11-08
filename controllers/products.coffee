@@ -10,10 +10,10 @@ module.exports =
 
   index: (req, res) ->
     Product.find {}, (err, products) ->
-      res.send products
+      res.send {products: _.map(products, (product) -> product.toObject())}
 
   show: (req, res) ->
-    res.send req.product
+    res.send {product: req.product.toObject()}
     
   create: (req, res) ->
     Product.create req.body, (err, product) ->

@@ -1,0 +1,6 @@
+ul
+  each model
+    li
+      = title
+      = description
+      = price

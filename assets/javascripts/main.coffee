@@ -1,3 +1,3 @@
 require ['common'], ->
   require ['App', 'ember'], (App, Ember) ->
-    window.App = Ember.Application.create(App)
+    window.App = Ember.Application.createWithMixins(App)

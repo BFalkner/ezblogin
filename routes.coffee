@@ -19,9 +19,9 @@ module.exports = (app, config) ->
   
   app.get '/products', products.index
   app.post '/products', products.create
-  app.all '/product/:id/:op?', products.load
-  app.get '/product/:id', products.show
-  app.put '/product/:id', products.update
-  app.delete '/product/:id', products.destroy
+  app.all '/products/:id/:op?', products.load
+  app.get '/products/:id', products.show
+  app.put '/products/:id', products.update
+  app.delete '/products/:id', products.destroy
   
   app.get '/', index(config)
