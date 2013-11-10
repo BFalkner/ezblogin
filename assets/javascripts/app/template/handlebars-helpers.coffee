@@ -1,3 +1,3 @@
-define ['handlebars', 'showdown'], (Handlebars, Showdown) ->
-  Handlebars.registerHelper 'format-markdown', (value) ->
-    new Handlebars.SafeString new Showdown.converter().makeHtml(@content.get value)
+define ['ember', 'handlebars', 'showdown'], (Ember, Handlebars, Showdown) ->
+  Ember.Handlebars.helper 'format-markdown', (value) ->
+    new Handlebars.SafeString new Showdown.converter().makeHtml(value)
