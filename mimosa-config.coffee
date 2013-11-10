@@ -218,13 +218,13 @@ exports.config = {
                                 # watch.compiledDir, or absolute.  Paths are to compiled files,
                                 # so '.js' rather than '.coffee'	
 
-  # lint:                      # settings for js, css linting/hinting
+  lint:                      # settings for js, css linting/hinting
     # exclude:[]               # array of strings or regexes that match files to not lint,
                                # strings are paths that can be relative to the watch.compiledDir
                                # or absolute
-    # compiled:                # settings for compiled files
+    compiled:                # settings for compiled files
       # javascript:true        # fire jshint on successful compile of meta-language to javascript
-      # css:true               # fire csslint on successful compile of meta-language to css
+      css:false               # fire csslint on successful compile of meta-language to css
     # copied:                  # settings for copied files, files already in .css and .js files
       # javascript: true       # fire jshint for copied javascript files
       # css: true              # fire csslint for copied css files
