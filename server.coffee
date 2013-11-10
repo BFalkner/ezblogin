@@ -33,6 +33,7 @@ exports.startServer = (config, callback) ->
   app.configure 'development', ->
     app.use express.errorHandler()
 
+  require('./authentication')
   require('./routes') app, config
 
   callback(server)

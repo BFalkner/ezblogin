@@ -17,7 +17,7 @@ define (require) ->
     
     session: 'cookie'
     
-    signInEndPoint: '/sign-in'
-    signOutEndPoint: '/sign-out'
+    signInEndPoint: '/login'
+    signOutEndPoint: '/logout'
     
     modules: ['emberData']

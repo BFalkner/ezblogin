@@ -24,4 +24,10 @@ module.exports = (app, config) ->
   app.put '/products/:id', products.update
   app.delete '/products/:id', products.destroy
   
+  
+  passport = require 'passport'
+  
+  app.post '/login', passport.authenticate('local')
+  
+  
   app.get '/', index(config)

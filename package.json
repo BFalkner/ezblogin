@@ -17,6 +17,7 @@
     "consolidate": "0.9.1",
     "jade": "0.34.1",
     "mongoose": "3.8.0",
-    "underscore": "*"
+    "underscore": "*",
+    "passport-local": "*"
   }
 }

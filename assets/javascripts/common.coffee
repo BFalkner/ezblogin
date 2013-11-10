@@ -12,6 +12,16 @@ requirejs.config
       exports: "DS"
     showdown:
       exports: "Showdown"
+    "ember-auth":
+      deps: ["ember"]
+    'vendor/ember-auth-request-jquery/ember-auth-request-jquery':
+      deps: ["ember-auth"]
+    'vendor/ember-auth-response-json/ember-auth-response-json':
+      deps: ["ember-auth"]
+    'vendor/ember-auth-strategy-token/ember-auth-strategy-token':
+      deps: ["ember-auth"]
+    'vendor/ember-auth-session-cookie/ember-auth-session-cookie':
+      deps: ["ember-auth"]
   paths:
     App: "app/app"
     models: "app/models"

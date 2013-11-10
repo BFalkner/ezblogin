@@ -6,5 +6,5 @@ define (require) ->
       login: ->
         @auth.signIn
           data:
-            email: @get "username"
+            username: @get "username"
             password: @get "password"
