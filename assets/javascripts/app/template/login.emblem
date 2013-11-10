@@ -1,0 +1,4 @@
+form.login submit="login"
+  .form-group: = input value=username type="text" placeholder="E-mail"
+  .form-group: = input value=password type="password" placeholder="Password"
+  button type="submit" Login

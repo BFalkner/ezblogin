@@ -1,26 +1,56 @@
-@blue: #5B83AD;
-@yellow: #FFFFE0;
+@import "vendor/bootstrap/bootstrap";
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
-  .template {
-    background-color: @yellow;
+header {
+  .navbar;
+  .logo {
+    .navbar-brand;
   }
-
-  .helper {
-    border:1px solid @blue;
+  
+  .site-navigation {
+    .nav;
+    .navbar-nav;
+    .pull-right;
   }
+}
 
-  .styled {
-    -webkit-transform: rotate(-30deg);
-    -moz-transform: rotate(-30deg);
-    -ms-transform: rotate(-30deg);
-    -o-transform: rotate(-30deg);
-    transform: rotate(-30deg);
+.content {
+  .make-row();
+}
 
-    margin-top: 100px;
-    position: absolute;
+.products-list {
+  .nav;
+  .nav-pills;
+  .nav-stacked;
+  .make-md-column(2);
+}
+
+.product {
+  .make-md-column(10);  
+}
+
+.product-description {
+  .make-md-column(9);
+}
+
+.product-purchase {
+  .make-md-column(3);
+  .panel;
+  .panel-primary;
+  border-top-width: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+div.login {
+  margin-bottom: 20px;
+}
+form.login {
+  .form-inline;
+  input {
+    .form-control;
+  }
+  button[type=submit] {
+    .btn;
+    .btn-default;
   }
 }

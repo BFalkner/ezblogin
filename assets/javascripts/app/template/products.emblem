@@ -1,6 +1,8 @@
-ul
+ul.products-list
   each model
     li
-      = title
-      = description
-      = price
+      link-to "product" this
+        = title
+
+.product
+  outlet

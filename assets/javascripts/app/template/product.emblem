@@ -1,0 +1,6 @@
+.product-description
+  h2 = title
+  = description
+  
+.product-purchase
+  =price
