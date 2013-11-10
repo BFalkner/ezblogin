@@ -299,7 +299,7 @@ exports.config = {
                              # inferred config for each module. This allows the inferred config
                              # to be updated and enhanced instead of just overridden.	
 
-  # bower:                        # Configuration for bower module
+  bower:                        # Configuration for bower module
     # watch: true                 # Whether or not to watch the bower.json file to automatically
                                   # kick off a bower install when it changes.
     # bowerDir:
@@ -307,7 +307,7 @@ exports.config = {
                                                 # bower assets.
       # clean: true               # whether or not to remove temporary bower assets after install
 
-    # copy:                       # configuration for the copying of assets from bower temp
+    copy:                       # configuration for the copying of assets from bower temp
                                   # directories into the project
       # enabled: true             # whether or not to copy the assets out of the bowerDir.path
                                   # into the project vendor location
@@ -326,7 +326,9 @@ exports.config = {
       # exclude:[]                # An array of string paths or regexes. Files to exclude from
                                   # copying. Paths should be relative to the bowerdir.path or
                                   # absolute.
-      # mainOverrides: {}         # Occasionally bower packages do not clearly indicate what file
+      mainOverrides: {
+        "showdown": ["compressed/showdown.js"]
+      }         # Occasionally bower packages do not clearly indicate what file
                                   # is the main library file. In those cases, mimosa cannot find
                                   # the main files to copy them to the vendor directory. json2 is
                                   # a good example. mainOverrides allows for setting which files

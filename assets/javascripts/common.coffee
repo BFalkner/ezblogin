@@ -10,6 +10,8 @@ requirejs.config
     "ember-data":
       deps: ["ember"]
       exports: "DS"
+    showdown:
+      exports: "Showdown"
   paths:
     App: "app/app"
     models: "app/models"
@@ -22,3 +24,4 @@ requirejs.config
     handlebars: "vendor/handlebars/handlebars"
     ember: "vendor/ember/ember"
     "ember-data": "vendor/ember-data-shim/ember-data"
+    showdown: "vendor/showdown/showdown"

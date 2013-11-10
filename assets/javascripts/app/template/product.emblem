@@ -1,6 +1,6 @@
 .product-description
   h2 = title
-  = description
+  format-markdown description
   
 .product-purchase
   =price
