@@ -8,6 +8,10 @@
       li: a href="/blog" Blog
       li: a href="/login" Login
   
-  .login: render "login"
+  if auth.signedIn
+    .logout: auth.user.username
+  else
+    .login: render "login"
+
   .content
     = outlet

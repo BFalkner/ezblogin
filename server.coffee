@@ -2,6 +2,7 @@ express   = require 'express'
 engines   = require 'consolidate'
 mongoose  = require 'mongoose'
 fs        = require 'fs'
+passport  = require 'passport'
 
 exports.startServer = (config, callback) ->
   
@@ -27,6 +28,8 @@ exports.startServer = (config, callback) ->
     app.use express.bodyParser()
     app.use express.methodOverride()
     app.use express.compress()
+    app.use passport.initialize()
+    app.use passport.session()
     app.use config.server.base, app.router
     app.use express.static(config.watch.compiledDir)
 

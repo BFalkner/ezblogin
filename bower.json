@@ -11,6 +11,7 @@
     "ember-auth-request-jquery": "~1.0.3",
     "ember-auth-response-json": "~1.0.2",
     "ember-auth-strategy-token": "~1.0.2",
-    "ember-auth-session-cookie": "~1.0.1"
+    "ember-auth-session-cookie": "~1.0.1",
+    "ember-auth-module-ember-data": "~1.0.2"
   }
 }

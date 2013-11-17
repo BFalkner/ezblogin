@@ -26,8 +26,15 @@ module.exports = (app, config) ->
   
   
   passport = require 'passport'
+  session = require './controllers/session'
   
-  app.post '/login', passport.authenticate('local')
+  app.post '/login', passport.authenticate('local'), session.login
+  
+  
+  users = require './controllers/users'
+  
+  app.all '/users/:id/:op?', users.load
+  app.get '/users/:id', users.show
   
   
   app.get '/', index(config)

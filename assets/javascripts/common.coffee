@@ -22,6 +22,8 @@ requirejs.config
       deps: ["ember-auth"]
     'vendor/ember-auth-session-cookie/ember-auth-session-cookie':
       deps: ["ember-auth"]
+    'vendor/ember-auth-module-ember-data/ember-auth-module-ember-data':
+      deps: ["ember-auth"]
   paths:
     App: "app/app"
     models: "app/models"

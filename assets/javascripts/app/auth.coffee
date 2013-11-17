@@ -6,6 +6,9 @@ define (require) ->
   require 'vendor/ember-auth-response-json/ember-auth-response-json'
   require 'vendor/ember-auth-strategy-token/ember-auth-strategy-token'
   require 'vendor/ember-auth-session-cookie/ember-auth-session-cookie'
+  require 'vendor/ember-auth-module-ember-data/ember-auth-module-ember-data'
+  
+  require 'models/user'
   
   Ember.Auth.extend
     request: 'jquery'
@@ -13,6 +16,7 @@ define (require) ->
   
     strategy: 'token'
     tokenKey: 'auth_token'
+    tokenIdKey: 'user_id'
     tokenLocation: 'param'
     
     session: 'cookie'
@@ -21,3 +25,6 @@ define (require) ->
     signOutEndPoint: '/logout'
     
     modules: ['emberData']
+    
+    emberData:
+      userModel: 'user'
