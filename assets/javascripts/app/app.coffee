@@ -12,3 +12,4 @@ define (require) ->
     Router: require 'app/router'
     Store: DS.Store.extend
       revision: 12
+    ApplicationAdapter: require 'app/adapter'

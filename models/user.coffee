@@ -1,4 +1,5 @@
-mongoose = require 'mongoose'
+mongoose  = require 'mongoose'
+_         = require 'underscore'
 
 userSchema = new mongoose.Schema
   username: String
@@ -12,7 +13,6 @@ userSchema.methods =
     
 userSchema.options.toJSON =
   transform: (doc, ret, options) ->
-    id: ret._id
-    username: ret.username
+    _.omit ret, 'password'
 
 mongoose.model "User", userSchema
