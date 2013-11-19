@@ -8,6 +8,7 @@ define (require) ->
     IndexRoute: require 'routes/index'
     Product: require 'models/product'
     User: require 'models/user'
+    Role: require 'models/role'
     Auth: require 'app/auth'
     Router: require 'app/router'
     Store: DS.Store.extend

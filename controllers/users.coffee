@@ -10,3 +10,8 @@ module.exports =
 
   show: (req, res) ->
     res.send { user: req.user }
+    
+  update: (req, res) ->
+    _.extend req.user, req.body.user
+    req.user.save (err, user) ->
+      res.send { user: user }

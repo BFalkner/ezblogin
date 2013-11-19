@@ -4,6 +4,7 @@ _         = require 'underscore'
 userSchema = new mongoose.Schema
   username: String
   password: String
+  roles: [{ name: String }]
   
 userSchema.methods =
   isValidPassword: (password) ->

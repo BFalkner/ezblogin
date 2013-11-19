@@ -2,11 +2,8 @@
   header
     img class="logo" src="https://ezblogin.com/wp-content/uploads/2013/06/front.png"
     ul class="site-navigation"
-      li: a href="/" Inicio
-      li: a href="#" Tienda Online
-      li: a href="/precios" Precios
-      li: a href="/blog" Blog
-      li: a href="/login" Login
+      li: a href="http://ezblogin.com/" Back to Ezblogin
+      li: a href="#" Login
   
   if auth.signedIn
     .logout: auth.user.username

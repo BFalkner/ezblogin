@@ -35,6 +35,7 @@ module.exports = (app, config) ->
   
   app.all '/users/:id/:op?', users.load
   app.get '/users/:id', users.show
+  app.put '/users/:id', users.update
   
   
   app.get '/', index(config)
