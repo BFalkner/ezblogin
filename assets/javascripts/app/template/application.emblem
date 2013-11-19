@@ -4,11 +4,13 @@
     ul class="site-navigation"
       li: a href="http://ezblogin.com/" Back to Ezblogin
       li: a href="#" Login
+      if session.isAdmin
+        li: link-to "admin": | Admin
   
   if auth.signedIn
     .logout: auth.user.username
   else
-    .login: render "login"
+    .login: render "login" controller="session"
 
   .content
     = outlet

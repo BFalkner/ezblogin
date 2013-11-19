@@ -6,6 +6,11 @@ define (require) ->
     username: attr 'string'
     roles: DS.hasMany 'App.Role'
     
+    isAdmin: (->
+      @get('roles').any (role) ->
+        role.get('name') is "admin"
+    ).property 'roles.@each.name'
+    
   DS.RESTAdapter.map 'App.User',
     roles: { embedded: 'always' }
 

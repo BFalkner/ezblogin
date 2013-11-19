@@ -2,8 +2,9 @@ define (require) ->
   DS = require 'ember-data'
   App =
     ApplicationView: require 'views/application'
+    ApplicationController: require 'controllers/application'
     ProductsController: require 'controllers/products'
-    LoginController: require 'controllers/login'
+    SessionController: require 'controllers/session'
     ProductsRoute: require 'routes/products'
     IndexRoute: require 'routes/index'
     Product: require 'models/product'
