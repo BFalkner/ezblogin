@@ -11,6 +11,11 @@ define (require) ->
         role.get('name') is "admin"
     ).property 'roles.@each.name'
     
+    isVIP: (->
+      @get('roles').any (role) ->
+        role.get('name') is "vip"
+    ).property 'roles.@each.name'
+    
   DS.RESTAdapter.map 'App.User',
     roles: { embedded: 'always' }
 

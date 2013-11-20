@@ -3,4 +3,21 @@
   format-markdown description
   
 .product-purchase
-  =price
+  if session.isVIP
+    .price
+      | VIP Price: $
+      = vipPrice
+    .price.inactive
+      | Price: $
+      = price
+    hr
+    p.small You're recieving 30% off.  Thank you for choosing VIP.
+  else
+    .price
+      | Price: $
+      = price
+    .price.inactive
+      | VIP Price: $
+      = vipPrice
+    hr
+    p.small Upgrade to VIP for 30% off.

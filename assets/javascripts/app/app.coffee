@@ -3,6 +3,7 @@ define (require) ->
   App =
     ApplicationView: require 'views/application'
     ApplicationController: require 'controllers/application'
+    ProductController: require 'controllers/product'
     ProductsController: require 'controllers/products'
     SessionController: require 'controllers/session'
     ProductsRoute: require 'routes/products'
