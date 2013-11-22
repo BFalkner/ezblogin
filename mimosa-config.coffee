@@ -120,7 +120,7 @@ exports.config = {
 
   template:                         # overall template object can be set to null if no
                                       # templates being used
-    # nameTransform: "fileName"       # means by which Mimosa creates the name for each
+    nameTransform: /.*template\//       # means by which Mimosa creates the name for each
                                       # template, options: default "fileName" is name of file,
                                       # "filePath" is path of file after watch.sourceDir
                                       # with the extension dropped, a supplied regex can be
