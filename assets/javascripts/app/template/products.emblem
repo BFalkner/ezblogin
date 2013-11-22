@@ -1,8 +1,12 @@
 ul.products-list
   each model
     li
-      link-to "product" this
+      link-to "products.show" this.id
         = title
+  if session.isAdmin
+    li: link-to "products.create"
+      span.glyphicon.glyphicon-plus-sign
+      |  Add New
 
 .product
   outlet

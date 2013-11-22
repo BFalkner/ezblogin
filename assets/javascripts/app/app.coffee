@@ -3,10 +3,12 @@ define (require) ->
   App =
     ApplicationView: require 'views/application'
     ApplicationController: require 'controllers/application'
-    ProductController: require 'controllers/product'
     ProductsController: require 'controllers/products'
+    ProductsShowController: require 'controllers/products/show'
+    ProductsEditController: require 'controllers/products/edit'
     SessionController: require 'controllers/session'
     ProductsRoute: require 'routes/products'
+    ProductsCreateRoute: require 'routes/products/create'
     IndexRoute: require 'routes/index'
     Product: require 'models/product'
     User: require 'models/user'

@@ -58,3 +58,16 @@ form.login {
 .price.inactive {
   text-decoration: line-through;
 }
+
+button {
+  &.save {
+    &, &:hover, &:active, &:focus {
+      color: @brand-success;
+    }
+  }
+  &.cancel {
+    &, &:hover, &:active, &:focus {
+      color: @brand-danger;
+    }
+  }
+}

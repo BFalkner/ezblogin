@@ -3,9 +3,8 @@ define ["ember"], (Ember) ->
   
   Router.map ->
     @resource "products", ->
-      @resource "product", path: ":product_id"
-      
-    @resource "admin", ->
-      @resource "editProduct", path: ":product_id"
+      @route "create", path: "new"
+      @route "show", path: ":product_id"
+      @route "edit", path: ":product_id/edit"
       
   Router

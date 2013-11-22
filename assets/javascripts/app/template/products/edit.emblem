@@ -1,0 +1,19 @@
+form submit="save"
+  ..form-group.form-inline
+    .form-group
+      label.sr-only for="product-title"
+      = input value=title id="product-tile" type="text" placeholder="Title" class="form-control"
+    |  
+    .form-group
+      label.sr-only for="product-price"
+      = input value=price id="product-price" type="number" placeholder="Price" class="form-control" min="0.01" step="0.01"
+  .form-group
+    label.sr-only for="product-description"
+    = textarea value=description id="product-description" placeholder="Description - Markdown Enabled" class="form-control"
+  button.btn.btn-default.save type="submit"
+    span.glyphicon.glyphicon-ok
+    |  Save
+  |  
+  button.btn.btn-default.cancel click="cancel" type="button"
+    span.glyphicon.glyphicon-remove
+    |  Cancel

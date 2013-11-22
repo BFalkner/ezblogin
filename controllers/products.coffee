@@ -16,14 +16,14 @@ module.exports =
     res.send { product: req.product }
     
   create: (req, res) ->
-    Product.create req.body, (err, product) ->
-      res.send product
+    Product.create req.body.product, (err, product) ->
+      res.send product: product
     
   update: (req, res) ->
     _.extend req.product, req.body
     req.product.save (err, product) ->
-      res.send product
+      res.send product: product
 
   destroy: (req, res) ->
     req.product.remove (err, product) ->
-      res.send product
+      res.send null
