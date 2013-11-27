@@ -29,6 +29,7 @@ module.exports = (app, config) ->
   session = require './controllers/session'
   
   app.post '/login', passport.authenticate('local'), session.login
+  app.post '/rememberable', passport.authenticate('remember-token'), session.login
   
   
   users = require './controllers/users'

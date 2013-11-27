@@ -20,7 +20,7 @@ module.exports =
       res.send product: product
     
   update: (req, res) ->
-    _.extend req.product, req.body
+    _.extend req.product, req.body.product
     req.product.save (err, product) ->
       res.send product: product
 

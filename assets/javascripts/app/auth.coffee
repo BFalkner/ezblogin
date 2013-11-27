@@ -7,6 +7,7 @@ define (require) ->
   require 'vendor/ember-auth-strategy-token/ember-auth-strategy-token'
   require 'vendor/ember-auth-session-cookie/ember-auth-session-cookie'
   require 'vendor/ember-auth-module-ember-data/ember-auth-module-ember-data'
+  require 'vendor/ember-auth-module-rememberable/ember-auth-module-rememberable'
   
   require 'models/user'
   
@@ -24,7 +25,13 @@ define (require) ->
     signInEndPoint: '/login'
     signOutEndPoint: '/logout'
     
-    modules: ['emberData']
+    modules: ['emberData', 'rememberable']
+    
+    rememberable:
+      tokenKey: 'remember_token'
+      period: 14
+      autoRecall: true
+      endPoint: '/rememberable'
     
     emberData:
       userModel: 'user'

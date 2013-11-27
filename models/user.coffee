@@ -1,6 +1,7 @@
 mongoose  = require 'mongoose'
 _         = require 'underscore'
 
+
 userSchema = new mongoose.Schema
   username: String
   password: String
@@ -9,6 +10,7 @@ userSchema = new mongoose.Schema
 userSchema.methods =
   isValidPassword: (password) ->
     password is @password
+
   createToken: ->
     "abcd1234"
     
