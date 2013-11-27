@@ -17,5 +17,5 @@ define (require) ->
           @get('controllers.products').removeObject product
           @transitionToRoute 'products'
         else
-          product.rollback()
+          product.rollback() if product.get 'isDirty'
           @transitionToRoute 'products.show', product

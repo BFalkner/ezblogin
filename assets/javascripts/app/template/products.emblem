@@ -1,8 +1,11 @@
 ul.products-list
-  each model
+  each product in model
     li
-      link-to "products.show" this.id
-        = title
+      link-to "products.show" product.id
+        if session.isAdmin
+          button.hover-button click="editProduct product.id bubbles=false"
+            span.glyphicon.glyphicon-pencil
+        =  product.title
   if session.isAdmin
     li: link-to "products.create"
       span.glyphicon.glyphicon-plus-sign

@@ -5,11 +5,13 @@ define (require) ->
     username: null
     password: null
     
+    content: (->
+      @auth.get 'user'
+    ).property 'auth.user'
+    
     actions:
       login: ->
         @auth.signIn
           data:
             username: @get "username"
             password: @get "password"
-        .then =>
-          @set 'model', @auth.get 'user'

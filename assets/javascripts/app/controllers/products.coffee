@@ -11,3 +11,5 @@ define (require) ->
         products = @get 'model'
         newProduct = products.createRecord
         @transitionToRoute 'products.edit', newProduct
+      editProduct: (product) ->
+        @transitionToRoute 'products.edit', product
