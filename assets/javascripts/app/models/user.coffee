@@ -5,6 +5,7 @@ define (require) ->
   User = DS.Model.extend
     username: attr 'string'
     roles: DS.hasMany 'App.Role'
+    purchases: DS.hasMany 'App.Purchase'
     
     isAdmin: (->
       @get('roles').any (role) ->

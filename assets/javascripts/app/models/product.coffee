@@ -1,6 +1,7 @@
 define (require) ->
   DS = require 'ember-data'
   attr = DS.attr
+  
   DS.Model.extend
     title: attr 'string'
     description: attr 'string'
@@ -10,3 +11,5 @@ define (require) ->
     vipPrice: (->
       @get('price') * (1 - @get('vipDiscount'))
     ).property 'price'
+    
+    purchases: DS.hasMany 'App.Purchase'

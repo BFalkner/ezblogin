@@ -24,6 +24,15 @@ module.exports = (app, config) ->
   app.put '/products/:id', products.update
   app.delete '/products/:id', products.destroy
   
+  purchases = require './controllers/purchases'
+  
+  app.get '/purchases', purchases.index
+  app.post '/purchases', purchases.create
+  app.all '/purchases/:id/:op?', purchases.load
+  app.get '/purchases/:id', purchases.show
+  app.put '/purchases/:id', purchases.update
+  app.delete '/purchases/:id', purchases.destroy
+  
   
   passport = require 'passport'
   session = require './controllers/session'

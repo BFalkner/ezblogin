@@ -32,6 +32,7 @@ requirejs.config
     views: "app/views"
     controllers: "app/controllers"
     routes: "app/routes"
+    components: "app/components"
     
     #libs
     jquery: "vendor/jquery/jquery"
@@ -40,3 +41,4 @@ requirejs.config
     "ember-data": "vendor/ember-data-shim/ember-data"
     showdown: "vendor/showdown/showdown"
     "ember-auth": "vendor/ember-auth/ember-auth"
+    stripe: "https://checkout.stripe.com/checkout"

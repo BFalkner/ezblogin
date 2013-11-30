@@ -21,3 +21,11 @@
       = vipPrice
     hr
     p.small Upgrade to VIP for 30% off.
+
+  if auth.signedIn
+    if session.isVIP
+      = purchase-button amount=vipPrice name=title action="purchase"
+    else
+      = purchase-button amount=price name=title action="purchase"
+  else
+    | Sign in to purchase.
