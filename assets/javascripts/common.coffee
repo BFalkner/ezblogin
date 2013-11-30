@@ -41,4 +41,4 @@ requirejs.config
     "ember-data": "vendor/ember-data-shim/ember-data"
     showdown: "vendor/showdown/showdown"
     "ember-auth": "vendor/ember-auth/ember-auth"
-    stripe: "https://checkout.stripe.com/checkout"
+    stripe: "vendor/stripe/checkout"
