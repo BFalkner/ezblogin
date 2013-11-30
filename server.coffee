@@ -6,7 +6,7 @@ passport  = require 'passport'
 
 exports.startServer = (config, callback) ->
   
-  mongoose.connect "mongodb://localhost:27017/ezblogin-dev"
+  mongoose.connect process.env.MONGOHQ_URL || "mongodb://localhost:27017/ezblogin-dev"
   
   models_path = __dirname + '/models'
   fs.readdirSync(models_path).forEach (file) ->
