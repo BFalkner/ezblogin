@@ -5,7 +5,7 @@ requirejs.config
       deps: []
       exports: "Handlebars"
     ember:
-      deps: ["handlebars", "jquery"]
+      deps: ["jquery"]
       exports: "Ember"
     "ember-data":
       deps: ["ember"]
