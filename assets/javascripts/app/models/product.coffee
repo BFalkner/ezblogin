@@ -7,7 +7,7 @@ define (require) ->
     description: attr 'string'
     price: attr 'number'
     
-    vipDiscount: .3
+    vipDiscount: 0.3
     vipPrice: (->
       @get('price') * (1 - @get('vipDiscount'))
     ).property 'price'
