@@ -1,6 +1,5 @@
 define (require) ->
   Ember = require 'ember'
-  require 'stripe'
   
   activeComponent = null
   
