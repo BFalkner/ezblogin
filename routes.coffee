@@ -16,36 +16,38 @@ index = (config) ->
 
 module.exports = (app, config) ->
   products = require './controllers/products'
-  
+
   app.get '/products', products.index
   app.post '/products', products.create
   app.all '/products/:id/:op?', products.load
   app.get '/products/:id', products.show
   app.put '/products/:id', products.update
   app.delete '/products/:id', products.destroy
-  
+
   purchases = require './controllers/purchases'
-  
+
   app.get '/purchases', purchases.index
   app.post '/purchases', purchases.create
   app.all '/purchases/:id/:op?', purchases.load
   app.get '/purchases/:id', purchases.show
   app.put '/purchases/:id', purchases.update
   app.delete '/purchases/:id', purchases.destroy
-  
-  
+
+
   passport = require 'passport'
   session = require './controllers/session'
-  
+
   app.post '/login', passport.authenticate('local'), session.login
   app.post '/rememberable', passport.authenticate('remember-token'), session.login
-  
-  
+  app.delete '/logout', (req, res) ->
+    req.logout()
+    res.send auth_token: 'abcd1234'
+
   users = require './controllers/users'
-  
+
   app.all '/users/:id/:op?', users.load
   app.get '/users/:id', users.show
   app.put '/users/:id', users.update
-  
-  
+
+
   app.get '/', index(config)
