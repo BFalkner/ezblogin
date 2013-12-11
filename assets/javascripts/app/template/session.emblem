@@ -1,0 +1,13 @@
+if content
+  | Logged in as
+  = content.username
+  a click="logout" href="#" (Logout)
+else
+  popup-link containerElement="body" placement="bottom" value="Login"
+    form.login submit="login" role="form"
+      .form-group: = input value=username type="text" placeholder="E-mail"
+      .form-group: = input value=password type="password" placeholder="Password"
+      .form-group
+        button type="submit" Login
+        |  &nbsp;
+        a click="hide target='popover'" href="#" Cancel

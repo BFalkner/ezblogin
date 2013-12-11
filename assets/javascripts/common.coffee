@@ -23,6 +23,8 @@ requirejs.config
       deps: ["ember-auth"]
     'vendor/ember-auth-module-rememberable/ember-auth-module-rememberable':
       deps: ["ember-auth"]
+    bootstrap:
+      deps: ['jquery']
   paths:
     App: "app/app"
     models: "app/models"
@@ -30,10 +32,11 @@ requirejs.config
     controllers: "app/controllers"
     routes: "app/routes"
     components: "app/components"
-    
+
     #libs
     jquery: "vendor/jquery/jquery"
     ember: "vendor/ember/ember"
     "ember-data": "vendor/ember-data-shim/ember-data"
     showdown: "vendor/showdown/showdown"
     "ember-auth": "vendor/ember-auth/ember-auth"
+    bootstrap: "vendor/bootstrap/bootstrap"
