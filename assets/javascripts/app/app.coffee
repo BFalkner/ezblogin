@@ -8,7 +8,6 @@ define (require) ->
 
     # Views
     ApplicationView:  require 'views/application'
-    SessionView:  require 'views/session'
 
     # Controllers
     ApplicationController:  require 'controllers/application'
