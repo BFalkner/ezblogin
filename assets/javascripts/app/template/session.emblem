@@ -1,7 +1,9 @@
 if content
-  | Logged in as
-  = content.username
-  a click="logout" href="#" (Logout)
+  p.navbar-text.navbar-right
+    | Logged in as 
+    = content.username
+    |  
+    a click='logout' class="navbar-link" href="#" (Logout)
 else
   popup-link containerElement="body" placement="bottom" value="Login"
     form.login submit="login" role="form"
