@@ -9,7 +9,12 @@ form submit="save"
       = input value=price id="product-price" type="number" placeholder="Price" class="form-control" min="0.01" step="0.01"
   .form-group
     label.sr-only for="product-description"
-    = textarea value=description id="product-description" placeholder="Description - Markdown Enabled" class="form-control"
+    .wmd-panel
+      #wmd-button-bar.navbar
+      = textarea value=description id="wmd-input" placeholder="Description - Markdown Enabled" class="form-control wmd-input"
+    #preview
+      strong Preview:
+      #wmd-preview.wmd-panel.wmd-preview
   button.btn.btn-default.save type="submit"
     span.glyphicon.glyphicon-ok
     |  Save

@@ -9,6 +9,7 @@ define (require) ->
 
     # Views
     ApplicationView:  require 'views/application'
+    ProductsEditView:  require 'views/products/edit'
 
     # Controllers
     ApplicationController:  require 'controllers/application'
