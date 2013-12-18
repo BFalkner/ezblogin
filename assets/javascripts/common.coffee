@@ -25,6 +25,9 @@ requirejs.config
       deps: ["ember-auth"]
     bootstrap:
       deps: ['jquery']
+    "pagedown-editor":
+      deps: ['pagedown-converter']
+      exports: "Markdown"
   paths:
     App: "app/app"
     models: "app/models"
@@ -41,3 +44,5 @@ requirejs.config
     showdown: "vendor/showdown/showdown"
     "ember-auth": "vendor/ember-auth/ember-auth"
     bootstrap: "vendor/bootstrap/bootstrap"
+    "pagedown-converter": "vendor/pagedown/Markdown.Converter"
+    "pagedown-editor": "vendor/pagedown/Markdown.Editor"
