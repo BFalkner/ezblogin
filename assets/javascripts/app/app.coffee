@@ -1,5 +1,6 @@
 define (require) ->
   DS = require 'ember-data'
+  require 'initializers/extensions'
 
   App =
     # Components

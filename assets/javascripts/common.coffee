@@ -32,6 +32,7 @@ requirejs.config
     controllers: "app/controllers"
     routes: "app/routes"
     components: "app/components"
+    initializers: "app/initializers"
 
     #libs
     jquery: "vendor/jquery/jquery"

@@ -1,6 +1,7 @@
 .product-description
   h2 = title
-  format-markdown description
+  if description
+    format-markdown description
   
 .product-purchase
   if session.isVIP
