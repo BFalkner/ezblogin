@@ -5,27 +5,27 @@
 .product-purchase
   if session.isVIP
     .price
-      | VIP Price: $
-      = vipPrice
+      | VIP Price: 
+      = vipPriceLabel
     .price.inactive
-      | Price: $
-      = price
+      | Price: 
+      = priceLabel
     hr
     p.small You're recieving 30% off.  Thank you for choosing VIP.
   else
     .price
-      | Price: $
-      = price
+      | Price: 
+      = priceLabel
     .price.inactive
-      | VIP Price: $
-      = vipPrice
+      | VIP Price: 
+      = vipPriceLabel
     hr
     p.small Upgrade to VIP for 30% off.
 
   if auth.signedIn
     if session.isVIP
-      = purchase-button amount=vipPrice name=title action="purchase"
+      = purchase-button amount=vipPriceInCents name=title action="purchase"
     else
-      = purchase-button amount=price name=title action="purchase"
+      = purchase-button amount=priceInCents name=title action="purchase"
   else
     | Sign in to purchase.
