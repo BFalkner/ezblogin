@@ -1,15 +1,15 @@
 define (require) ->
   Ember = require 'ember'
-  
+
   Ember.ObjectController.extend
     needs: ['products']
-  
+
     actions:
       save: ->
         product = @get('model')
-        product.save()
-        @transitionToRoute 'products.show', product
-        
+        product.save().then (p) =>
+          @transitionToRoute 'products.show', product
+
       cancel: ->
         product = @get('model')
         if product.get('isNew')
